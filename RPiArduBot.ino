@@ -1,3 +1,4 @@
+#include <Servo.h>
 #include <Motor.h>
 /* A program to interface with python on rpi
  *
@@ -6,7 +7,9 @@
  *
  * [  m    0/1       0/1         0 - 255]
  *
- * Servo   0 - 180    sweep
+ * Servo   pan/tilt      Position      none
+ *
+ * [s       0/1           0 - 180        0]
  *
  */
 
@@ -18,12 +21,17 @@ String getInfo;
 boolean strComplete = false;
 Motor motorA(Motor::MOTOR_A);
 Motor motorB(Motor::MOTOR_B);
+Servo pan;
+Servo tilt;
+
 void setup()
 {
   // Open Serial communication
   Serial.begin(115200);
   Serial.println("Motor shield DC motor Test:\n");
   getInfo.reserve(5);
+  pan.attach(5);
+  tilt.attach(6);
 }
 
 void loop() {
@@ -41,6 +49,7 @@ void loop() {
       case 'c' : //Get Motor current consumption
         break;
       case 's' :
+        handleServo(str);
         break;
       default:
         Serial.println("Error at:");
@@ -65,8 +74,8 @@ void serialEvent()
 
 void handleMotor(String info)
 {
-  int d;
-  int v;
+  int d;  //direction
+  int v; //pwm value
   v = (int)info[3];
   v = v < 0 ? (v + 256) : v; //convert signed char to unsigned
   //   subtract zero to convert
@@ -85,9 +94,16 @@ void handleMotor(String info)
 
 void handleServo(String info)
 {
+  int p; //postion of the servo 1-180
+  int m;  // servo 0 -> pan  | 1 -> tilt
+  p = (int)info[2];  //convert signed char to unsigned
+  p = p < 0 ? (p + 256) : p;
 
+  m = (int)info[1]; //get motor, pan or tilt
+  (m == 0) ? pan.write(p) : ((m == 1) ? tilt.write(p) : doNothing());
 }
 
 void doNothing()
 {
+  //do absolutely nothing void
 }
