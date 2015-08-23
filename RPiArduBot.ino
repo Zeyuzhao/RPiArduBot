@@ -66,9 +66,10 @@ void serialEvent()
   while (Serial.available()) {
     char inChar = (char)Serial.read();
     getInfo += inChar;
-    if (getInfo.length() >= 4) {
+    if (getInfo.length() >= 4 || inChar == '\n') {
       strComplete = true;
     }
+    
   }
 }
 
@@ -85,7 +86,7 @@ void handleMotor(String info)
   //         multiply to give direction (d is pos or neg)
   (m == 0) ? motorA.move(v * d) : (m == 1) ? motorB.move(v * d) : doNothing(); //if motor is 0 then turn A motor; if motor is 1 then B motor, otherwise do nothing
 
-  #ifndef debug
+  #if debug
   Serial.println("line: " + info);
   Serial.println("Value: " + String(v));
   Serial.println("Converted Value: " + String(v * d));
@@ -96,6 +97,7 @@ void handleMotor(String info)
 
 void handleServo(String info)
 {
+  Serial.println("Servo: ");
   int p; //postion of the servo 1-180
   int m;  // servo 0 -> pan  | 1 -> tilt
   p = getInt(info[2]);
