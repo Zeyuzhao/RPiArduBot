@@ -3,9 +3,9 @@
 /* A program to interface with python on rpi
  *
  * [Device , infoBit1, 2, 3]
- * Motor   A/B    Foward/Back     Val
+ * Motor    A/B   Foward/Back   Val
  *
- * [  m    0/1       0/1         0 - 255]
+ * [  m   0/1       0/1         0 - 255]
  *
  * Servo   pan/tilt      Position      none
  *
@@ -76,12 +76,14 @@ void handleMotor(String info)
 {
   int d;  //direction
   int v; //pwm value
-  v = (int)info[3];
-  v = v < 0 ? (v + 256) : v; //convert signed char to unsigned
+  int m; //which motor
+  v = getInt(info[3]);
   //   subtract zero to convert
-  d = (info[2] - '0') == 0 ? -1 : ((info[2] - '0') == 1 ? 1 : 0); //if direction is 0 then it is foward; if direction is 1 then backward, otherwise zero(no effect)
-  //                     multiply to give direction (d is pos or neg)
-  (info[1] - '0') == 0 ? motorA.move(v * d) : ((info[1] - '0') == 1 ? motorB.move(v * d) : doNothing()); //if motor is 0 then turn A motor; if motor is 1 then B motor, otherwise do nothing
+  d = info[2] - '0';
+  d = (d == 0) ? -1 : (d == 1) ? 1 : 0); //if direction is 0 then it is foward; if direction is 1 then backward, otherwise zero(no effect)
+  m = info[1] - '0';
+  //         multiply to give direction (d is pos or neg)
+  (m == 0) ? motorA.move(v * d) : (m == 1) ? motorB.move(v * d) : doNothing()); //if motor is 0 then turn A motor; if motor is 1 then B motor, otherwise do nothing
 
   #ifndef debug
   Serial.println("line: " + info);
@@ -96,14 +98,19 @@ void handleServo(String info)
 {
   int p; //postion of the servo 1-180
   int m;  // servo 0 -> pan  | 1 -> tilt
-  p = (int)info[2];  //convert signed char to unsigned
-  p = p < 0 ? (p + 256) : p;
-
-  m = (int)info[1]; //get motor, pan or tilt
+  p = getInt(info[2]);
+  m = (int)(info[1] - '0'); //get motor, pan or tilt
   (m == 0) ? pan.write(p) : ((m == 1) ? tilt.write(p) : doNothing());
 }
 
 void doNothing()
 {
-  //do absolutely nothing void
+  //do absolutely nothing; void
+}
+
+//convert char to int
+int getInt(char c)
+{
+  int v = (int)c;
+  return v = v < 0 ? (v + 256) : v;  //convert signed char to unsigned
 }
