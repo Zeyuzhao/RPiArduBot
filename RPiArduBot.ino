@@ -80,10 +80,10 @@ void handleMotor(String info)
   v = getInt(info[3]);
   //   subtract zero to convert
   d = info[2] - '0';
-  d = (d == 0) ? -1 : (d == 1) ? 1 : 0); //if direction is 0 then it is foward; if direction is 1 then backward, otherwise zero(no effect)
+  d = (d == 0) ? -1 : (d == 1) ? 1 : 0; //if direction is 0 then it is foward; if direction is 1 then backward, otherwise zero(no effect)
   m = info[1] - '0';
   //         multiply to give direction (d is pos or neg)
-  (m == 0) ? motorA.move(v * d) : (m == 1) ? motorB.move(v * d) : doNothing()); //if motor is 0 then turn A motor; if motor is 1 then B motor, otherwise do nothing
+  (m == 0) ? motorA.move(v * d) : (m == 1) ? motorB.move(v * d) : doNothing(); //if motor is 0 then turn A motor; if motor is 1 then B motor, otherwise do nothing
 
   #ifndef debug
   Serial.println("line: " + info);
