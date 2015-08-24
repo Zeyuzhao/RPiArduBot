@@ -5,7 +5,8 @@ from motor import *
 
 app = Flask(__name__)
 
-
+'''
+Use for debugging
 @app.route("/pin/<changePin>/<action>")
 def action(changePin, action):
     changePin = int(changePin)
@@ -15,6 +16,7 @@ def action(changePin, action):
     if action == "off":
      	GPIO.output(changePin, GPIO.LOW)
     return action
+'''
 
 @app.route("/robot/<action>")
 def movement(action):
@@ -42,5 +44,3 @@ def script():
     return render_template("script.js", **templateData)
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=69, debug=True)
-    
-
