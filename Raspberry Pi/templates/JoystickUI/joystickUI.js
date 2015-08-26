@@ -4,13 +4,9 @@ pointer.origin = {};
 
 var canvas, c;
 
-
 document.addEventListener("DOMContentLoaded", init);
-
 window.onorientationchange = resetCanvas;
-
 window.onresize = resetCanvas;
-
 
 function init() {
     setupCanvas();
@@ -37,6 +33,7 @@ function draw() {
         c.arc(o.x, o.y, 40, 0, Math.PI * 2);
         c.stroke();
         
+        
         p = pointer.tracker;
         c.beginPath();
         c.fillStyle = "white";
@@ -47,6 +44,10 @@ function draw() {
         c.lineWidth = "6";
         c.arc(p.x, p.y, 40, 0, Math.PI * 2);
         c.stroke();
+        
+        
+        
+        
     }
     window.requestAnimationFrame(draw);
 }
@@ -102,6 +103,4 @@ function setupCanvas() {
     c = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    c.strokeStyle = "#ffffff";
-    c.lineWidth = 2;
 }
