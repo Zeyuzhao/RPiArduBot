@@ -10,8 +10,6 @@ window.onorientationchange = resetCanvas;
 window.onresize = resetCanvas;
 
 
-
-var debug = true;
 function init() {
     setupCanvas();
     canvas.addEventListener('pointerdown', onPointerDown, false);
@@ -24,7 +22,6 @@ function init() {
 function resetCanvas(e) {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-
     window.scrollTo(0, 0);
 }
 
@@ -40,9 +37,6 @@ function draw() {
         c.lineWidth = "6";
         c.arc(p.x, p.y, 40, 0, Math.PI * 2);
         c.stroke();
-        //console.log("drawn");
-        //console.log(p.type);
-        //console.log(p.x);
     }
     window.requestAnimationFrame(draw);
 }
@@ -64,7 +58,7 @@ function createPointer(event)
             color = "cyan";
             break;   
     }
-    return { identifier: event.pointerId, x: event.clientX, y: event.clientY, 
+    return {id: event.pointerId, x: event.clientX, y: event.clientY, 
     type: type, color: color };
 }
 function onPointerDown(e) {
@@ -77,7 +71,6 @@ function onPointerMove(e) {
         pointers[e.pointerId - 1].y = e.clientY;
     }  
     //console.log(pointers[e.pointerId - 1].x);
-    console.log(e);
 }
 function onPointerUp(e) {
     pointers = pointers.splice(e.pointerId,1);
