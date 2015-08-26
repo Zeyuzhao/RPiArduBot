@@ -15,6 +15,8 @@ function init() {
     mjpeg_img.onerror = error_img;
     reload_img();
 }
+
+
 $(document).ready(
     function () {
         $(document).keydown(function (e) {
