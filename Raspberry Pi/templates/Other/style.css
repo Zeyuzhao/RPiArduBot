@@ -27,7 +27,6 @@ body{
 	-o-transition: all 1s ease;
 }
 
-/* Important! Responsive nav bar currently works best when the page width is at or above 785px! */
 
 .nav:hover {
 	font-family: "Ubuntu", sans-serif;
@@ -86,28 +85,70 @@ body{
 	text-align: center;
 }
 
-.camitem {
+.arrow {
 	font-family: "Ubuntu Light", sans-serif;
 	background: #ecf0f1;
 	color: inherit;
-	padding: 0px;
-    margin: -16px;
+	line-height: 100px;
+	vertical-align: center;
 	transition: all 1s ease;
 	-webkit-transition: all 1s ease;
 	-moz-transition: all 1s ease;
 	-o-transition: all 1s ease;
 }
 
-.camitem:hover {
+.arrow:hover {
 	font-family: "Ubuntu Light", sans-serif;
 	background: #3498db;
 	color: #ecf0f1;
-	padding: 0px;
-    margin: -16px;
 	transition: all 1s ease;
 	-webkit-transition: all 1s ease;
 	-moz-transition: all 1s ease;
 	-o-transition: all 1s ease;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: rgba(255,255,255,0.0); 
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+	-webkit-transition: all 1s ease;
+}
+ 
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    background: rgba(0,0,0,0.2); 
+	-webkit-transition: all 1s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    background: rgba(0,0,0,0.4); 
+	-webkit-transition: all 1s ease;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    background: rgba(0,0,0,0.35); 
+	-webkit-transition: all 1s ease;
+}
+
+::-webkit-scrollbar-thumb:active {
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    background: rgba(0,0,0,0.6); 
+	-webkit-transition: all 1s ease;
 }
 
 a {
