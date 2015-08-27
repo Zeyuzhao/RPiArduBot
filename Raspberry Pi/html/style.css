@@ -1,0 +1,130 @@
+body{
+	font-family: "Ubuntu Light", sans-serif;
+	font-size: 16px;
+	color: #2c3e50;
+	width: 100%;
+	text-align: center;
+}
+
+.nav {
+	font-family: "Ubuntu Light", sans-serif;
+	font-size: 3vw;
+	vertical-align: top;
+	color: #ecf0f1 !important;
+	text-decoration: none !important;
+	height: 50px;
+	float: auto;
+	background: #3498db;
+	border: none;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+}
+
+/* Important! Responsive nav bar currently works best when the page width is at or above 785px! */
+
+.nav:hover {
+	font-family: "Ubuntu", sans-serif;
+	font-size: 4.5vw;
+	vertical-align: top;
+	height: 80px;
+	float: auto;
+	background: #2980b9;
+	border: none;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+}
+
+.navitem {
+	font-family: "Ubuntu Light", sans-serif;
+	font-size: 2.5vw;
+	color: #ecf0f1 !important;
+	text-decoration: none !important;
+	text-align: center;
+	background: inherit;
+	height: 100% !important;
+	border: none;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+}
+
+.navitem:hover {
+	font-family: "Ubuntu", sans-serif;
+	font-size: 4.85vw;
+	color: #2980b9 !important;
+	text-decoration: none !important;
+	text-align: center;
+	background: #ecf0f1;
+	height: 100% !important;
+	border: none;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+}
+
+.content {
+	background: #ffffff;
+	border: none;
+	width: 90%;
+	margin: 96px auto;
+	float: auto !important;
+	text-align: center;
+}
+
+.camitem {
+	font-family: "Ubuntu Light", sans-serif;
+	background: #ecf0f1;
+	color: inherit;
+	padding: 0px;
+    margin: -16px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+}
+
+.camitem:hover {
+	font-family: "Ubuntu Light", sans-serif;
+	background: #3498db;
+	color: #ecf0f1;
+	padding: 0px;
+    margin: -16px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+}
+
+a {
+color: inherit !important;
+text-decoration: none !important;
+}
+
+a:hover {
+color: inherit !important;
+text-decoration: none !important;
+}
+
+a:focus {
+color: inherit !important;
+text-decoration: none !important;
+}
+
+a:visited {
+color: inherit !important;
+text-decoration: none !important;
+}
