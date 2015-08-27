@@ -1,40 +1,47 @@
 <html>
-    <head>
-        <style>
-* {
-    -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
-    /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    touch-action: none;
-}
 
-body {
-    background-color: #000000;
-    margin: 0px;
-}
+<head>
+    <style>
+        * {
+            -webkit-touch-callout: none;
+            /* prevent callout to copy image, etc when tap to hold */
 
-canvas {
-    background-color: #111133;
-    display: block;
-    position: absolute;
-}
+            -webkit-text-size-adjust: none;
+            /* prevent webkit from resizing text to fit */
+            /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 
-.container {
-    width: auto;
-    text-align: center;
-    background-color: #ff0000;
-}
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-user-select: none;
+            /* prevent copy paste, to allow, change 'none' to 'text' */
 
-        </style>
-    </head>
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            touch-action: none;
+        }
 
-    <body onload="init();" >
-        <canvas id="box" width="750" height="750"></canvas>
-    </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/handjs/1.3.11/hand.min.js"></script>
-    <script src = "joystickUI.js"></script>
+        body {
+            margin: 0px;
+        }
+
+        #detect {
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        #wrapper {
+          position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div id = "wrapper">
+      <img class = "box" id = "image"></img>
+      <canvas class = "box" id = "detect"></canvas>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handjs/1.3.11/hand.min.js"></script>
+<script src="joystickUI.js"></script>
+
 </html>

@@ -37,8 +37,6 @@ function draw() {
     window.requestAnimationFrame(draw);
 }
 
-
-
 box.addEventListener('touchstart', function (e) {
     var touchobj = e.changedTouches[0]; // reference first touch point (ie: first finger)
     touchStart = true;

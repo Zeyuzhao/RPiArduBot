@@ -1,18 +1,18 @@
-var mjpeg_img;
+var box;
 var allowed = true;
 
 function reload_img() {
-    mjpeg_img.src = "http://" + window.location.hostname + ":80/" + "cam_pic.php?time=" + new Date().getTime();
+    var source = "http://" + "10.0.0.19" + ":80/" + "cam_pic.php?time=" + new Date().getTime();
+    box.src = source;
 }
-
 function error_img() {
-    setTimeout("mjpeg_img.src = 'http://' + window.location.hostname + ':80/' + 'cam_pic.php?time=' + new Date().getTime();", 100);
+    setTimeout(reload_img(), 100);
 }
 
 function init() {
-    mjpeg_img = document.getElementById("mjpeg_dest");
-    mjpeg_img.onload = reload_img;
-    mjpeg_img.onerror = error_img;
+    box = document.getElementById("box");
+    box.onload = reload_img;
+    box.onerror = error_img;
     reload_img();
 }
 

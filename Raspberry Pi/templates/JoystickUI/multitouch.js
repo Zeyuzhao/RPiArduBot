@@ -1,5 +1,6 @@
 var pointers = [];
 
+
 var canvas, c;
 
 var moved = true;
@@ -31,7 +32,7 @@ function draw() {
         p = pointers[i];
         c.beginPath();
         c.fillStyle = "white";
-        c.fillText(p.type + " x:" + p.x + " y:" + p.y, p.x + 30, p.y - 30);    
+        c.fillText(p.type + " x:" + p.x + " y:" + p.y, p.x + 30, p.y - 30);
         c.beginPath();
         c.strokeStyle = p.color;
         c.lineWidth = "6";
@@ -43,7 +44,7 @@ function draw() {
 function createPointer(event)
 {
     var type, color;
-    
+
     switch(event.pointerType) {
         case "mouse":
             type = "MOUSE";
@@ -56,9 +57,9 @@ function createPointer(event)
         case "touch":
             type = "TOUCH";
             color = "cyan";
-            break;   
+            break;
     }
-    return {id: event.pointerId, x: event.clientX, y: event.clientY, 
+    return {id: event.pointerId, x: event.clientX, y: event.clientY,
     type: type, color: color };
 }
 function onPointerDown(e) {
@@ -69,7 +70,7 @@ function onPointerMove(e) {
     if (pointers[e.pointerId - 1]) {
         pointers[e.pointerId - 1].x = e.clientX;
         pointers[e.pointerId - 1].y = e.clientY;
-    }  
+    }
     //console.log(pointers[e.pointerId - 1].x);
 }
 function onPointerUp(e) {
@@ -81,5 +82,5 @@ function setupCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     c.strokeStyle = "#ffffff";
-    c.lineWidth = 2;  
+    c.lineWidth = 2;
 }
