@@ -1,6 +1,7 @@
 body{
 	font-family: "Ubuntu Light", sans-serif;
 	font-size: 16px;
+	background: #ecf0f1;
 	color: #2c3e50;
 	width: 100%;
 	text-align: center;
@@ -77,7 +78,7 @@ body{
 }
 
 .content {
-	background: #ffffff;
+	background: #ecf0f1;
 	border: none;
 	width: 90%;
 	margin: 96px auto;
