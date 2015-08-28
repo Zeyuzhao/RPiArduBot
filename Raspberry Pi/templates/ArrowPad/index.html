@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrow Pad - RPiArduBot</title>
+    <script src="../Other/jquery-2.1.4.min.js"></script>
+    <script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="..\Other\style.css">
+  </head>
+  <body onload="setTimeout('init();', 100);">
+  <div>
+   <!-- Need to fix: responsive colours updating slowly after :hover/:active is deactivated in ie/ms edge -->
+   <div class="nav" style="border-bottom: 2px solid #7f8c8d;">
+      <table style="border: none; top: 0px;" align="center">
+	  <tr style="height: 100% !important;">
+	  <td style="width: 25%;">RPiArduBot</td>
+	  <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='../index.html'">Home</td>
+	  <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='../controls.html'">Controls</td>
+	  <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='../camera.html'">Camera</td>
+      <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='../about.html'">About</td>
+	  </tr>
+	  </table>
+	  <a name="top"></a>
+   </div>
+   <div class="locnav"><a href="../index.html">RPiArduBot</a> > <a href="../controls.html">Controls</a> > Arrow Pad</div>
+    <div class="content">   
+     <a name=".controls"></a>
+	 <table style="width: 39%;" align="center">
+	 <tr height="100px">
+	 <td style="width: 13%" />
+	 <td style="width: 13%">
+	 <div id="u" class="arrow"><p>Up</p></div>
+	 </td>
+	 <td style="width: 13%" />
+	 </tr>
+	 <tr height="100px">
+	 <td style="width: 13%">
+	 <div id="l" class="arrow"><p>Left</p></div>
+	 </td>
+	 <td style="width: 13%" />
+	 <td style="width: 13%">
+	 <div id="r" class="arrow"><p>Right</p></div>
+	 </td>
+	 </tr>
+	 <tr height="100px">
+	 <td style="width: 13%" />
+	 <td style="width: 13%">
+     <div id="d" class="arrow"><p>Down</p></div>
+	 </td>
+	 <td style="width: 13%" />
+	 </tr>
+	 </table>
+	 <img id="box" />
+	</div>
+	<br />
+	<br />
+	<p>© Copyright 2015</p>
+   </div>
+ </body>
+</html>
