@@ -35,7 +35,7 @@ body{
 	line-height: 75px;
 	vertical-align: center;
 	float: auto;
-	background: #f1f1f1;
+	background: #ffffff;
 	border: none;
 	width: 100%;
 	position: fixed;
@@ -66,7 +66,8 @@ body{
 	color: #3498db !important;
 	text-decoration: none !important;
 	text-align: center;
-	background: #ffffff;
+	background: #f3f3f3;
+	border-bottom: 3px solid #3498db !important;
 	height: 100% !important;
 	border: none;
 	transition: all 0.8s ease;
@@ -89,18 +90,18 @@ body{
 	color: inherit;
 	line-height: 100px;
 	vertical-align: center;
-	transition: all 1s ease;
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
+	transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+	-moz-transition: all 0.75s ease;
 }
 
 .arrow:hover {
 	font-family: "Ubuntu Light", sans-serif;
 	background: #3498db;
 	color: #eeeeee;
-	transition: all 1s ease;
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
+	transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+	-moz-transition: all 0.75s ease;
 }
 
 .selectbox {
@@ -309,12 +310,18 @@ a:visited:active {
 	-moz-transition: all 0.5s ease;
 }
 
-h2{
+h1{
 	font-family: "Ubuntu", sans-serif;
+	font-size: 40px
+}
+
+
+h2{
+	font-family: "Ubuntu Light", sans-serif;
 	font-size: 30px
 }
 
-h2{
+h3{
 	font-family: "Ubuntu Light", sans-serif;
 	font-size: 22px
 }
