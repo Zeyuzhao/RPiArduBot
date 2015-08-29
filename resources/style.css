@@ -1,0 +1,346 @@
+body{
+	font-family: Ubuntu, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	background: #eeeeee;
+	color: #232323;
+	width: 100%;
+	text-align: center;
+}
+
+.nav {
+	font-family: Ubuntu, sans-serif;
+	font-size: 3vw;
+	font-weight: 300;
+	line-height: 50px;
+	vertical-align: center;
+	color: #34495e !important;
+	text-decoration: none !important;
+	height: 50px;
+	float: auto;
+	background: #ffffff;
+	border: none;
+	box-shadow: 0px 5px 14px;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+}
+
+
+.nav:hover {
+	font-family: Ubuntu, sans-serif;
+	height: 75px;
+	line-height: 75px;
+	vertical-align: center;
+	float: auto;
+	background: #ffffff;
+	border: none;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+}
+
+.navitem {
+	font-family: Ubuntu, sans-serif;
+	font-size: 2vw;
+	font-weight: 300;
+	color: #232323 !important;
+	text-decoration: none !important;
+	text-align: center;
+	background: inherit;
+	height: 100% !important;
+	border: none;
+	transition: all 0.8s ease;
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: all 0.8s ease;
+}
+
+.navitem:hover {
+	font-family: Ubuntu, sans-serif;
+	font-size: 2vw;
+	font-weight: 300;
+	color: #3498db !important;
+	text-decoration: none !important;
+	text-align: center;
+	background: #f3f3f3;
+	border-bottom: 3px solid #3498db !important;
+	height: 100% !important;
+	border: none;
+	transition: all 0.8s ease;
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: all 0.8s ease;
+}
+
+.content {
+	background: #eeeeee;
+	border: none;
+	width: 90%;
+	margin: 40px auto;
+	float: auto !important;
+	text-align: center;
+}
+
+.arrow {
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	background: #eeeeee;
+	color: inherit;
+	line-height: 100px;
+	vertical-align: center;
+	transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+	-moz-transition: all 0.75s ease;
+}
+
+.arrow:hover {
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	background: #3498db;
+	color: #eeeeee;
+	transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+	-moz-transition: all 0.75s ease;
+}
+
+.selectbox {
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	background: transparent;
+	color: #232323;
+	border: 1px solid #3498db;
+	padding: 16px;
+	border-radius: 5px;
+	vertical-align: center;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+}
+
+.selectbox:hover {
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	background: #3498db;
+	color: #eeeeee;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+}
+
+.ctrlslct {
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	background: #eeeeee;
+	color: #232323;
+	padding: 12px;
+	border: 1px solid #2980b9;
+	border-radius: 3px;
+	vertical-align: center;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+}
+
+.ctrlslct:hover {
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	background: #2980b9;
+	color: #eeeeee;
+	transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+	-moz-transition: all 0.75s ease;
+}
+
+.ctrlslct:active{
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	background: #2b5797;
+	color: #eeeeee;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+}
+
+button {
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	background: transparent;
+	color: #232323;
+	border: 1px solid #3498db;
+	padding: 10px;
+	border-radius: 4px;
+	vertical-align: center;
+	transition: all 0.8s ease;
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: all 0.8s ease;
+}
+
+button:hover {
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	background: #3498db;
+	color: #eeeeee;
+	transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+	-moz-transition: all 0.75s ease;
+}
+
+button:active{
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	background: #2b5797;
+	color: #eeeeee;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+}
+
+.location{
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	background: #eeeeee;
+	color: #232323;
+	text-align: left;
+	margin: 64px 9px 10px 0px;
+	top: 0px;
+	left: 0px;
+	transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+	-moz-transition: all 0.75s ease;
+}
+
+.location:hover{
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	background: #e1e1e1;
+	color: #232323;
+	transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+	-moz-transition: all 0.75s ease;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.0);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+	-webkit-transition: all 1s ease;
+}
+ 
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2); 
+	-webkit-transition: all 1s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.4); 
+	-webkit-transition: all 1s ease;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.35); 
+	-webkit-transition: all 1s ease;
+}
+
+::-webkit-scrollbar-thumb:active {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.6); 
+	-webkit-transition: all 1s ease;
+}
+
+a {
+	color: #2980b9;
+	text-decoration: none !important;
+	transition: all 0.7s ease;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+}
+
+a:hover {
+	color: #3498db;
+	text-decoration: none !important;
+	transition: all 0.7s ease;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+}
+
+a:focus {
+	color: #2980b9;
+	text-decoration: none !important;
+	transition: all 0.7s ease;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+}
+
+a:active {
+	color: #2980b9;
+	text-decoration: none !important;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+}
+
+a:visited {
+	color: #8e44ad;
+	text-decoration: none !important;
+	transition: all 0.6s ease;
+	-webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+}
+
+a:visited:hover {
+	color: #9b59b6;
+	text-decoration: none !important;
+	transition: all 0.65s ease;
+	-webkit-transition: all 0.65s ease;
+	-moz-transition: all 0.65s ease;
+}
+
+a:visited:active {
+	color: #8e44ad;
+	text-decoration: none !important;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+}
+
+h1{
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	font-size: 38px
+}
+
+
+h2{
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	font-size: 30px
+}
+
+h3{
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	font-size: 23px
+}

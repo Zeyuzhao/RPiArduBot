@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <style>
+        * {
+            -webkit-touch-callout: none;
+            /* prevent callout to copy image, etc when tap to hold */
+
+            -webkit-text-size-adjust: none;
+            /* prevent webkit from resizing text to fit */
+            /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-user-select: none;
+            /* prevent copy paste, to allow, change 'none' to 'text' */
+
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            touch-action: none;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        #detect {
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        #wrapper {
+          position: relative;
+        }
+    </style>
+	<link rel="stylesheet" type="text/css" href="..\resources\joystick.css">
+	<title>Joystick</title>
+	<script src="../resources/jquery-2.1.4.min.js"></script>
+	<script src="../resources/hand.min.js"></script>
+	<script src="joystickUI.js"></script>
+</head>
+
+<body>
+    <div id = "wrapper">
+      <img class = "box" id = "image"></img>
+      <canvas class = "box" id = "detect"></canvas>
+    </div>
+</body>
+</html>
