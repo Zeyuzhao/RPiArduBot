@@ -1,6 +1,7 @@
 body{
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
 	font-size: 16px;
+	font-weight: 300;
 	background: #eeeeee;
 	color: #232323;
 	width: 100%;
@@ -8,8 +9,9 @@ body{
 }
 
 .nav {
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
 	font-size: 3vw;
+	font-weight: 300;
 	line-height: 50px;
 	vertical-align: center;
 	color: #34495e !important;
@@ -30,7 +32,7 @@ body{
 
 
 .nav:hover {
-	font-family: "Ubuntu", sans-serif;
+	font-family: Ubuntu, sans-serif;
 	height: 75px;
 	line-height: 75px;
 	vertical-align: center;
@@ -47,8 +49,9 @@ body{
 }
 
 .navitem {
-	font-family: "Ubuntu Light", sans-serif;
-	font-size: 2.5vw;
+	font-family: Ubuntu, sans-serif;
+	font-size: 2vw;
+	font-weight: 300;
 	color: #232323 !important;
 	text-decoration: none !important;
 	text-align: center;
@@ -61,8 +64,9 @@ body{
 }
 
 .navitem:hover {
-	font-family: "Ubuntu Light", sans-serif;
-	font-size: 2.5vw;
+	font-family: Ubuntu, sans-serif;
+	font-size: 2vw;
+	font-weight: 300;
 	color: #3498db !important;
 	text-decoration: none !important;
 	text-align: center;
@@ -85,7 +89,8 @@ body{
 }
 
 .arrow {
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
 	background: #eeeeee;
 	color: inherit;
 	line-height: 100px;
@@ -96,7 +101,8 @@ body{
 }
 
 .arrow:hover {
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
 	background: #3498db;
 	color: #eeeeee;
 	transition: all 0.75s ease;
@@ -105,7 +111,8 @@ body{
 }
 
 .selectbox {
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
 	background: transparent;
 	color: #232323;
 	border: 1px solid #3498db;
@@ -118,7 +125,8 @@ body{
 }
 
 .selectbox:hover {
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
 	background: #3498db;
 	color: #eeeeee;
 	transition: all 1s ease;
@@ -127,7 +135,8 @@ body{
 }
 
 .ctrlslct {
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
 	background: #eeeeee;
 	color: #232323;
 	padding: 12px;
@@ -140,7 +149,8 @@ body{
 }
 
 .ctrlslct:hover {
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
 	background: #2980b9;
 	color: #eeeeee;
 	transition: all 0.75s ease;
@@ -149,7 +159,8 @@ body{
 }
 
 .ctrlslct:active{
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
 	background: #2b5797;
 	color: #eeeeee;
 	transition: all 0.5s ease;
@@ -158,7 +169,8 @@ body{
 }
 
 button {
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
 	background: transparent;
 	color: #232323;
 	border: 1px solid #3498db;
@@ -171,7 +183,8 @@ button {
 }
 
 button:hover {
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
 	background: #3498db;
 	color: #eeeeee;
 	transition: all 0.75s ease;
@@ -180,7 +193,8 @@ button:hover {
 }
 
 button:active{
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
 	background: #2b5797;
 	color: #eeeeee;
 	transition: all 0.5s ease;
@@ -189,11 +203,12 @@ button:active{
 }
 
 .location{
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
 	background: #eeeeee;
 	color: #232323;
 	text-align: left;
-	margin: 62px 9px 10px 0px;
+	margin: 64px 9px 10px 0px;
 	top: 0px;
 	left: 0px;
 	transition: all 0.75s ease;
@@ -202,7 +217,8 @@ button:active{
 }
 
 .location:hover{
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
 	background: #e1e1e1;
 	color: #232323;
 	transition: all 0.75s ease;
@@ -311,17 +327,20 @@ a:visited:active {
 }
 
 h1{
-	font-family: "Ubuntu", sans-serif;
-	font-size: 40px
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	font-size: 38px
 }
 
 
 h2{
-	font-family: "Ubuntu Light", sans-serif;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
 	font-size: 30px
 }
 
 h3{
-	font-family: "Ubuntu Light", sans-serif;
-	font-size: 22px
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	font-size: 23px
 }

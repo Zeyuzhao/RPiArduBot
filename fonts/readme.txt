@@ -1,1 +1,0 @@
-Note: these are fonts that i used in the html/css documents. the main program should autoinstall them.
