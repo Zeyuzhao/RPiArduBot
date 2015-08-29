@@ -202,6 +202,24 @@ button:active{
 	-moz-transition: all 0.5s ease;
 }
 
+.updown{
+	background: transparent;
+	border: none;
+	border-radius: 0px;
+}
+
+.updown:hover{
+	background: transparent;
+	border: none;
+	border-radius: 0px;
+}
+
+.updown:active{
+	background: transparent;
+	border: none;
+	border-radius: 0px;
+}
+
 .location{
 	font-family: Ubuntu, sans-serif;
 	font-weight: 300;
@@ -224,6 +242,26 @@ button:active{
 	transition: all 0.75s ease;
 	-webkit-transition: all 0.75s ease;
 	-moz-transition: all 0.75s ease;
+}
+
+.bottomMenu {
+    position: fixed;
+    bottom: 10vh;
+    width: 50px;
+    height: 120px;
+    background: #2980b9 !important;
+    z-index: 1 !important;
+    transition: all 1.25s ease;
+}
+
+.hide {
+    opacity: 0;
+    left:-250px;
+}
+
+.show {
+    opacity: 1 !important;
+    left: 0px;
 }
 
 ::-webkit-scrollbar {
