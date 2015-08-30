@@ -5,18 +5,36 @@
 	<link rel="stylesheet" type="text/css" href="Other/style.css">
 	<script src="https://use.edgefonts.net/ubuntu:n3,i3,n4,i4.js"></script>
 	<script type="text/javascript" src="Other\skipscroll.js"></script>
+	<script type="text/javascript" src="Other\menu.js"></script>
   </head>
   <body>
  <a name="top"></a>
   <div>
+   <div class="Menu hide" id="menu">
+   <table style="width: 100% !important;">
+   <tr>
+   <td onclick="hideMenu();">
+   <p style="text-align: right !important; height: 10%; font-size: 3.5vw !important;" class="navitem">x &nbsp;&nbsp;</p>
+   </td>
+   </tr>
+   <tr>
+   <td>
+   <ul>
+   <li class="navitem" onclick="location.href='index.html'">Home</li>
+   <li class="navitem" onclick="location.href='controls.html'">Controls</li>
+   <li class="navitem" onclick="location.href='#top'">Camera</li>
+   <li class="navitem" onclick="location.href='about.html'">About</li>
+   </ul>
+   </td>
+   </tr>
+   </table>
+   </div>
    <div class="nav">
-      <table style="border: none; top: 0px;" align="center">
+      <table style="border: none; top: 0px; width: 100% !important;">
 	  <tr style="height: 100% !important;">
-	  <td style="width: 25%;">RPiArduBot</td>
-	  <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='index.html'">Home</td>
-	  <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='controls.html'">Controls</td>
-	  <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='#top'">Camera</td>
-      <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='about.html'">About</td>
+	  <td class="menuopen" style="border: none; width: 12.5% !important;" onclick="showMenu();">&#8801; </td>
+	  <td style="width: 75% !important;">RPiArduBot</td>
+	  <td style="width: 12.5% !important;"> </td>
 	  </tr>
 	  </table>
    </div>

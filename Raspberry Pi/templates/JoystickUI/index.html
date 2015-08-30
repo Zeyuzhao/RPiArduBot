@@ -1,30 +1,84 @@
-<!DOCTYPE html>
-<html lang=en>
-  <head>
-    <meta charset=utf-8>
-    <meta name="viewport" content="width=device-width; height=device-height; initial-scale=1.0; maximum-scale=1.0;" /> 
-    <title>Joystick</title>
-    <link rel="stylesheet" href="virtualjoystick.css" />
+<html>
+
+<head>
+    <style>
+        * {
+            -webkit-touch-callout: none;
+            /* prevent callout to copy image, etc when tap to hold */
+
+            -webkit-text-size-adjust: none;
+            /* prevent webkit from resizing text to fit */
+            /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-user-select: none;
+            /* prevent copy paste, to allow, change 'none' to 'text' */
+
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			-webkit-touch-action: none !important;
+            touch-action: none !important;
+        }
+
+        body {
+            margin: 50px 0px 0px;
+        }
+
+        #detect {
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        #wrapper {
+          position: relative;
+        }
+    </style>
+	<script src="..\Other\jquery-2.1.4.min.js"></script>
+	<script src="..\Other\hand.min.js"></script>
+	<script src="joystickUI.js"></script>
+	<script type="text/javascript" src="..\Other\skipscroll.js"></script>
+	<script type="text/javascript" src="..\Other\menu.js"></script>
+	<script type="text/javascript">  $('body').css({'overflow':'hidden'});
+  $(document).bind('scroll',function () { 
+       window.scrollTo(0,0); 
+  });</script>
 	<link rel="stylesheet" type="text/css" href="..\Other\style.css">
-	<script src="https://use.edgefonts.net/ubuntu:n3,i3,n4,i4.js"></script>
-    <script src="Hand.js"></script>
-    <script src="Collection.js"></script>
-    <script src="Touches.js"></script>
-  </head>
-  <body>
-   <div class="nav" style="z-index: 1 !important; -webkit-size-adjust: auto !important;">
-      <table style="border: none; top: 0px;" align="center">
+	<title>Joystick</title>
+</head>
+<body>
+   <div style="z-index: 1 !important">
+   <div class="Menu hide" id="menu">
+   <table style="width: 100% !important;">
+   <tr>
+   <td onclick="hideMenu();">
+   <p style="text-align: right !important; height: 10%; font-size: 3.5vw !important;" class="navitem">x &nbsp;&nbsp;</p>
+   </td>
+   </tr>
+   <tr>
+   <td>
+   <ul>
+   <li class="navitem" onclick="location.href='../index.html'">Home</li>
+   <li class="navitem" onclick="location.href='../controls.html'">Controls</li>
+   <li class="navitem" onclick="location.href='../camera.html'">Camera</li>
+   <li class="navitem" onclick="location.href='../about.html'">About</li>
+   </ul>
+   </td>
+   </tr>
+   </table>
+   </div>
+   <div class="nav">
+      <table style="border: none; top: 0px; width: 100% !important;">
 	  <tr style="height: 100% !important;">
-	  <td style="width: 25%;">RPiArduBot</td>
-	  <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='../index.html'">Home</td>
-	  <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='../controls.html'">Controls</td>
-	  <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='../camera.html'">Camera</td>
-      <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='../about.html'">About</td>
+	  <td class="menuopen" style="border: none; width: 12.5% !important;" onclick="showMenu();">&#8801; </td>
+	  <td style="width: 75% !important;">RPiArduBot</td>
+	  <td style="width: 12.5% !important;"> </td>
 	  </tr>
 	  </table>
    </div>
-      <div class="container">
-          <canvas id="canvasSurface"></canvas>
-      </div>
-  </body>
+   </div>
+    <div id = "wrapper">
+      <img class = "box" id = "image"></img>
+      <canvas class = "box" id = "detect"></canvas>
+    </div>
+</body>
 </html>

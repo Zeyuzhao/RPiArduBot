@@ -10,9 +10,9 @@ var scrollFunc = function () {
     
     var y = window.scrollY;
     if (y > 0.2*height && y < 0.75*height) {
-        skipScroll.className = "bottomMenu show"
+        skipScroll.className = "bottomMenu show1"
     } else {
-        skipScroll.className = "bottomMenu hide"
+        skipScroll.className = "bottomMenu hide1"
     }
 };
 
