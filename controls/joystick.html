@@ -1,21 +1,21 @@
-<html>
-
-<head>
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width; height=device-height; initial-scale=1.0; maximum-scale=1.0;" /> 
+    <title>Joystick</title>
+    <link rel="stylesheet" href="virtualjoystick.css" />
 	<link rel="stylesheet" type="text/css" href="../resources/style.css">
-	<link rel="stylesheet" type="text/css" href="../resources/joystick.css">
-	<title>Joystick</title>
-	<script src="../resources/jquery-2.1.4.min.js"></script>
-	<script src="../resources/hand.min.js"></script>
-	<script src="joystickUI.js"></script>
 	<script src="https://use.edgefonts.net/ubuntu:n3,i3,n4,i4.js"></script>
-</head>
-
-<body>
-  <a name="top"></a>
-   <div class="nav" style="width: 100% !important; z-index: 1; -webkit-text-size-adjust: auto !important;">
+    <script src="Hand.js"></script>
+    <script src="Collection.js"></script>
+    <script src="Touches.js"></script>
+  </head>
+  <body>
+     <div class="nav" style="z-index: 1 !important">
       <table style="border: none; top: 0px;" align="center">
 	  <tr style="height: 100% !important;">
-	  <td style="width: 25%;"><h2>RPiArduBot</h2></td>
+	  <td style="width: 25%;">RPiArduBot</td>
 	  <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='../index.html'">Home</td>
 	  <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='../documentation.html'">Documentation</td>
 	  <td class="navitem" style="border: none; width: 12.5%;" onclick="location.href='https://github.com/Zeyuzhao/RPiArduBot/'">Repository</td>
@@ -23,10 +23,8 @@
 	  </tr>
 	  </table>
    </div>
-    <div id = "wrapper">
-      <img class = "box" id = "image"></img>
-      <canvas class = "box" id = "detect"></canvas>
-    </div>
-	<a name="bottom"></a>
-</body>
+      <div class="container">
+          <canvas id="canvasSurface"></canvas>
+      </div>
+  </body>
 </html>
