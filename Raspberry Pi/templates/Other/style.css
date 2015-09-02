@@ -1,6 +1,6 @@
 body{
 	font-family: Ubuntu, sans-serif;
-	font-size: 16px;
+	font-size: 24px;
 	font-weight: 300;
 	background: #eeeeee;
 	color: #232323;
@@ -10,17 +10,17 @@ body{
 
 .nav {
 	font-family: Ubuntu, sans-serif;
-	font-size: 3vw;
+	font-size: 4.75vw;
 	font-weight: 300;
-	line-height: 50px;
+	height: 70px;
+	line-height: 70px;
 	vertical-align: center;
 	color: #34495e;
 	text-decoration: none !important;
-	height: 50px;
 	float: auto;
 	background: #ffffff;
 	border: none;
-	box-shadow: 0px 5px 14px;
+	box-shadow: 0px 5px 15px;
 	width: 100%;
 	position: fixed;
 	top: 0px;
@@ -33,8 +33,8 @@ body{
 
 .nav:hover {
 	font-family: Ubuntu, sans-serif;
-	height: 75px;
-	line-height: 75px;
+	height: 100px;
+	line-height: 100px;
 	vertical-align: center;
 	float: auto;
 	background: #ffffff;
@@ -50,11 +50,12 @@ body{
 
 .navitem {
 	font-family: Ubuntu, sans-serif;
-	font-size: 2.5vw;
+	font-size: 4vw;
 	font-weight: 300;
 	color: #ecf0f1;
 	text-decoration: none !important;
 	text-align: center;
+	padding: 8px;
 	background: inherit;
 	list-style: none !important;
 	width: 100%;
@@ -66,7 +67,7 @@ body{
 
 .navitem:hover {
 	font-family: Ubuntu, sans-serif;
-	font-size: 2.5vw;
+	font-size: 4vw;
 	font-weight: 300;
 	color: #2c3e50;
 	text-decoration: none !important;
@@ -81,7 +82,7 @@ body{
 
 .menuopen {
 	font-family: Ubuntu, sans-serif;
-	font-size: 2vw;
+	font-size: 2.5vw;
 	font-weight: 300;
 	color: #2c3e50;
 	text-decoration: none !important;
@@ -96,7 +97,7 @@ body{
 
 .menuopen:hover {
 	font-family: Ubuntu, sans-serif;
-	font-size: 2vw;
+	font-size: 2.5vw;
 	font-weight: 300;
 	color: #2c3e50;
 	text-decoration: none !important;
@@ -255,7 +256,7 @@ button:active{
 	background: #eeeeee;
 	color: #232323;
 	text-align: left;
-	margin: 64px 9px 10px 0px;
+	margin: 100px 9px 10px 0px;
 	top: 0px;
 	left: 0px;
 	transition: all 0.75s ease;
@@ -288,7 +289,7 @@ button:active{
 .Menu {
     position: fixed;
     bottom: 0;
-    width: 40% !important;
+    width: 45% !important;
     height: 100%;
 	color: #ecf0f1 !important;
     background: #2c3e50 !important;
@@ -298,7 +299,7 @@ button:active{
 
 .hide {
     opacity: 0;
-    left: -200%;
+    left: -150%;
 }
 
 .show {
@@ -419,18 +420,18 @@ a:visited:active {
 h1{
 	font-family: Ubuntu, sans-serif;
 	font-weight: 300;
-	font-size: 38px
+	font-size: 45px
 }
 
 
 h2{
 	font-family: Ubuntu, sans-serif;
 	font-weight: 300;
-	font-size: 30px
+	font-size: 36px
 }
 
 h3{
 	font-family: Ubuntu, sans-serif;
 	font-weight: 300;
-	font-size: 23px
+	font-size: 28px
 }
