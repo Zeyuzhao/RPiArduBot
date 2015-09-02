@@ -20,6 +20,7 @@ body{
 	float: auto;
 	background: #ffffff;
 	border: none;
+	cursor: default !important;
 	box-shadow: 0px 5px 15px;
 	width: 100%;
 	position: fixed;
@@ -60,6 +61,7 @@ body{
 	list-style: none !important;
 	width: 100%;
 	border: none;
+	cursor: default !important;
 	transition: all 0.8s ease;
 	-webkit-transition: all 0.8s ease;
 	-moz-transition: all 0.8s ease;
@@ -90,6 +92,7 @@ body{
 	background: inherit;
 	width: 100%;
 	border: none;
+	cursor: default !important;
 	transition: all 0.8s ease;
 	-webkit-transition: all 0.8s ease;
 	-moz-transition: all 0.8s ease;
@@ -169,7 +172,7 @@ body{
 	font-weight: 300;
 	background: #eeeeee;
 	color: #232323;
-	padding: 12px;
+	padding: 8px;
 	border: 1px solid #2980b9;
 	border-radius: 3px;
 	vertical-align: center;
@@ -292,6 +295,7 @@ button:active{
     width: 45% !important;
     height: 100%;
 	color: #ecf0f1 !important;
+	cursor: default !important;
     background: #2c3e50 !important;
     z-index: 1 !important;
     transition: all 1.4s ease;
@@ -299,7 +303,7 @@ button:active{
 
 .hide {
     opacity: 0;
-    left: -150%;
+    left: -125%;
 }
 
 .show {
@@ -309,7 +313,7 @@ button:active{
 
 .hide1 {
     opacity: 0;
-    right: -8vw;
+    right: -10vw;
 }
 
 .show1 {
