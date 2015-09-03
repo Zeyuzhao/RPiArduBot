@@ -25,6 +25,7 @@ body{
 	position: fixed;
 	top: 0px;
 	left: 0px;
+	cursor: default !important;
 	transition: all 1s ease;
 	-webkit-transition: all 1s ease;
 	-moz-transition: all 1s ease;
@@ -58,6 +59,7 @@ body{
 	background: inherit;
 	height: 100% !important;
 	border: none;
+	cursor: default !important;
 	transition: all 0.8s ease;
 	-webkit-transition: all 0.8s ease;
 	-moz-transition: all 0.8s ease;
