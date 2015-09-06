@@ -3,11 +3,14 @@ pointer.tracker = {};
 pointer.origin = {};
 var canvas, c;
 
-var imageUrl;
+
+var socket = io.connect('http://' + document.domain + ':' + location.port + '/robot');
+
 
 document.addEventListener("DOMContentLoaded", init);
 window.onorientationchange = resetCanvas;
 window.onresize = resetCanvas;
+
 
 //**********************************************************
 
@@ -17,7 +20,7 @@ Image refresh, get images from camera
 var image = document.getElementById("image");
 
 function reload_img() {
-    var source = "http://" + "10.0.0.19" + ":80/" + "cam_pic.php?time=" + new Date().getTime();
+    var source = "http://" + "10.0.0.19" + ":80" + "/cam_pic.php?time=" + new Date().getTime();
     image.src = source;
 }
 function error_img() {
@@ -58,7 +61,7 @@ function draw() {
     if (!(jQuery.isEmptyObject(pointer.origin))) { //test if origin object is empty, if empty then mouse isn't down => don't do anything
 
         //draw the origin, joystick core
-        o = pointer.origin;
+        var o = pointer.origin;
         c.beginPath();
         c.strokeStyle = "black";
         c.lineWidth = "10";
@@ -66,21 +69,20 @@ function draw() {
         c.stroke();
 
         //draw the joystick tracker debug info, should not be on final product
-        p = pointer.tracker;
-        c.beginPath();
+        var p = pointer.tracker;
+
+        /*c.beginPath();
         c.fillStyle = "white";
         c.fillText(p.type + " x:" + p.x + " y:" + p.y + " dist:" + p.dist, p.x + 30, p.y - 30);
-
+        */
         //draw the actual tracker
         c.beginPath();
         c.strokeStyle = p.color;
         c.lineWidth = "6";
         c.arc(p.x, p.y, 40, 0, Math.PI * 2);
         c.stroke();
-
-
-
-
+        //send info
+        sendPos(p.x, p.y);
     }
     window.requestAnimationFrame(draw); //recursion, needed to draw next frame!!!
 }
@@ -139,4 +141,20 @@ function setupCanvas() {
     canvas.height = window.innerHeight;
     image.width = window.innerWidth;
     image.height = window.innerHeight;
+}
+function sendPos(x ,y){
+    var dirX = x < 0 ? 0 : 1;
+    var dirY = y < 0 ? 0 : 1;
+
+    var data = {
+        x: {
+            dir: dirX,
+            s: Math.abs(x)
+        },
+        y: {
+            dir: dirY,
+            s: Math.abs(y)
+        }
+    };
+    socket.emit('motor', data);
 }

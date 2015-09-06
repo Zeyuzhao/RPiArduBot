@@ -34,15 +34,21 @@ def Stop():
     move(motorA, FMOVE, 0)
     move(motorB, FMOVE, 0)
     return "s"
+def moveMotors(aSpeed, bSpeed):
+    move(motorA, aSpeed.dir, aSpeed.s)
+    move(motorB, bSpeed.dir, bSpeed.s)
+
+
     
 ################################Testing#########################################
-#Foward()
-#raw_input()
-#Back()
-#raw_input()
-#Left()
-#raw_input()
-#Right()
-#raw_input()
-#Stop()
-    
+
+if __name__ == '__main__':
+    Foward()
+    raw_input()
+    Back()
+    raw_input()
+    Left()
+    raw_input()
+    Right()
+    raw_input()
+    Stop()

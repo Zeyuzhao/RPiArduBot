@@ -1,10 +1,10 @@
 from flask import Flask,render_template
+from flask.ext.socketio import SocketIO, emit
 import RPi.GPIO as GPIO
 
 from motor import *
 
 app = Flask(__name__)
-port = '0.0.0.0'
 socketio = SocketIO(app)
 
 '''
@@ -33,9 +33,14 @@ def movement(action):
     print func()
     return func()
 
-@socketio.on('motor',namespace = 'motor')
+
+
+@socketio.on('motor',namespace = 'robot')
 def handleMotor(info):
-    i
+    a = info['x']
+    b = info['y']
+    moveMotors(a, b)
+
 
 @app.route("/")
 def index():
@@ -48,4 +53,4 @@ def script():
     return render_template("script.js", **templateData)
 
 if __name__ == '__main__':
-    socketio.run(app, '0.0.0.0',port)
+    socketio.run(app, host = '0.0.0.0', port = 80)
