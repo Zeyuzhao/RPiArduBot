@@ -80,7 +80,7 @@ void serialEvent()
     if (getInfo.length() >= 4 || inChar == '\n') {
       strComplete = true;
     }
-    
+
   }
 }
 
